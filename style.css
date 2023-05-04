@@ -1,0 +1,8 @@
+body {
+  user-select: none;
+  background-image: url(./bossbackground.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+
+}

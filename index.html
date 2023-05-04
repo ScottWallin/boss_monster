@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Boss Monster</title>
+</head>
+
+<body>
+
+  <main class="container-fluid">
+    <!-- SECTION HEROES -->
+    <section class="row">
+      <div class="col-3 card border-dark justify-content-center" onclick="potion()">
+        player 1
+        <p>HP<span id="pathHealth"></span></p>
+        <p>LEVEL</p>
+        <button onclick="attackBossPath()">ATTACK</button>
+      </div>
+      <div class="col-3 border-dark card">
+        <div>
+          player 2
+        </div>
+        <p>HP<span id="calHealth"></span></p>
+        <p>LEVEL</p>
+        <button onclick="attackBossCal()">Attack</button>
+      </div>
+      </div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      </div>
+    </section>
+    <!-- SECTION BOSS -->
+    <section>
+      <div class="row">
+        <div class="col-8">
+          <div class="card border-dark">
+            <h1>BOSS</h1>
+            <span id="bossHealth"></span>
+            <progress id="file" value="100" max="100">50%</progress>
+            <button onclick="attackHeroes()">ATTACK</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION STORE & BUTTON -->
+    <section>
+      <div class="row">
+        <div class="col-5">
+          <div class="card">
+            <p onclick="buyPotion()">BUY POTION</p>
+            <p onclick="buyPlayerThree()">BUY PLAYER 3</p>
+            <p onclick="buyPlayerFour()">BUY PLAYER 4</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <button>RESET</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
