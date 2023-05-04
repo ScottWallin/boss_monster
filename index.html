@@ -18,20 +18,22 @@
   <main class="container-fluid">
     <!-- SECTION HEROES -->
     <section class="row">
-      <div class="col-3 card border-dark justify-content-center" onclick="potion()">
-        player 1
-        <p>HP<span id="pathHealth"></span></p>
-        <p>LEVEL</p>
-        <button onclick="attackBossPath()">ATTACK</button>
+      <div class="col-3 card border-dark justify-content-center" id="heroes" onclick="potion()">
+        <!-- <div>
+          player 1
+          <p>HP<span id="pathHealth"></span></p>
+          <p>LEVEL</p>
+          <button onclick="attackBossPath()">ATTACK</button>
+        </div> -->
       </div>
-      <div class="col-3 border-dark card">
+      <!-- <div class="col-3 border-dark card">
         <div>
           player 2
         </div>
         <p>HP<span id="calHealth"></span></p>
         <p>LEVEL</p>
         <button onclick="attackBossCal()">Attack</button>
-      </div>
+      </div> -->
       </div>
       <div class="col-3"></div>
       <div class="col-3"></div>
@@ -45,7 +47,8 @@
             <h1>BOSS</h1>
             <span id="bossHealth"></span>
             <progress id="file" value="100" max="100">50%</progress>
-            <button onclick="attackHeroes()">ATTACK</button>
+            <button onclick="attackHeroPath()">ATTACK PATH</button>
+            <button onclick="attackHeroCal()">ATTACK CAL</button>
           </div>
         </div>
       </div>

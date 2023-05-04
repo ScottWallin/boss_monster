@@ -21,6 +21,24 @@ const boss = {
   level: 1
 }
 
+function drawHeroes() {
+  // start with an empty template - empty template is ''
+  let template = ''
+  // grab the heroes we want to show up on the page
+  heroes.forEach(hero => template += `
+    <div>
+          <h3>${hero.name}</h3>
+          <p id="pathHealth">HP: ${hero.health}<span></span></p>
+          <p>Damage: ${hero.damage}</p>
+          <button onclick="attackBossPath()">ATTACK</button>
+    </div>
+  `)
+  // @ts-ignore
+  document.getElementById('heroes').innerHTML = template
+}
+drawHeroes()
+
+
 // SECTION damage
 // drawMaxHealth('maxHealth') {
 //   console.log('draw health')
@@ -55,10 +73,17 @@ function attackBossCal() {
   console.log('damage done', boss.maxHealth)
   updateBoss()
 }
-function attackHeroes() {
-  let Boss = boss[0]
-  heroes.health -= Boss.damage
-  console.log('damage done', heroes.health)
+function attackHeroPath() {
+  // let Boss = boss[0]
+  let Path = heroes[0]
+  Path.health -= boss.damage
+  console.log('damage done', Path.health)
+  updateHeroesBad()
+}
+function attackHeroCal() {
+  let Cal = heroes[1]
+  Cal.health -= boss.damage
+  console.log('damage done', Cal.health)
   updateHeroesBad()
 }
 
@@ -72,9 +97,12 @@ function updateBoss() {
 }
 updateBoss()
 
+// NOTE to make this re-usable use a parameter and argument
 function updateHeroesBad() {
+  let Path = heroes[0]
   let heroElem = document.getElementById('pathHealth')
-  heroElem.innerHTML = `<span>${heroes.health}</span>`
+  // @ts-ignore
+  heroElem.innerHTML = `<span>${Path.health}</span>`
 }
 updateHeroesBad()
 
