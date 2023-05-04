@@ -31,6 +31,7 @@ function drawHeroes() {
           <p id="pathHealth">HP: ${hero.health}<span></span></p>
           <p>Damage: ${hero.damage}</p>
           <button onclick="attackBossPath()">ATTACK</button>
+          
     </div>
   `)
   // @ts-ignore
